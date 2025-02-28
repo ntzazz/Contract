@@ -1,10 +1,66 @@
-.card {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.login-container {
+  height: 100vh;
+  background-color: #F0F2F5;
+  padding: 20px;
 }
-.btn-primary {
-  background-color: #0078D4;
-  border: none;
-  &:hover {
-    background-color: #005BB5;
+
+.branding {
+  max-width: 500px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1877F2;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #1C1E21;
+}
+
+.login-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border: 1px solid #DDD;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  &:focus {
+    border-color: #1877F2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+    outline: none;
   }
+}
+
+.btn-primary {
+  background-color: #1877F2;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  &:hover {
+    background-color: #166FE5;
+  }
+}
+
+.forgot-link {
+  color: #1877F2;
+  font-size: 14px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-danger {
+  color: #D9534F;
 }
