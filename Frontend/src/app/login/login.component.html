@@ -1,34 +1,25 @@
-<div class="login-container">
-  <div class="row g-0">
-    <!-- Left Branding (Simplified) -->
-    <div class="col-md-6 d-flex align-items-center justify-content-center">
-      <div class="branding text-center">
-        <h1 class="title">Contract Manager</h1>
-        <p class="subtitle">Manage your contracts with ease.</p>
-      </div>
-    </div>
-    <!-- Right Login Form -->
-    <div class="col-md-6 d-flex align-items-center justify-content-center">
-      <div class="card login-card">
-        <div class="card-body">
-          <form (ngSubmit)="login()">
-            <div class="mb-3">
-              <input type="text" class="form-control" id="userId" [(ngModel)]="userId" name="userId" placeholder="User ID" required>
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Password" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" id="captcha" [(ngModel)]="captcha" name="captcha" placeholder="Captcha (Enter: XYZ123)" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Log In</button>
-          </form>
-          <div class="text-center mt-3">
-            <a href="#" class="forgot-link">Forgot Password?</a>
-          </div>
-          <p class="mt-3 text-center" [ngClass]="{'text-danger': error}">{{ message }}</p>
+<div class="login-container d-flex justify-content-center align-items-center">
+  <div class="card login-card text-center">
+    <div class="card-body">
+      <h2 class="title mb-4">Contract Manager</h2>
+      <form (ngSubmit)="login()">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="userId" [(ngModel)]="userId" name="userId" placeholder="User ID" required>
         </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="mb-4">
+          <input type="text" class="form-control" id="captcha" [(ngModel)]="captcha" name="captcha" placeholder="Captcha (Enter: XYZ123)" required>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary w-100">Log In</button>
+        </div>
+      </form>
+      <div class="mt-3">
+        <a href="#" class="forgot-link">Forgot Password?</a>
       </div>
+      <p class="mt-3" [ngClass]="{'text-danger': error}">{{ message }}</p>
     </div>
   </div>
 </div>

@@ -1,23 +1,6 @@
 .login-container {
   height: 100vh;
-  background-color: #F0F2F5;
-  padding: 20px;
-}
-
-.branding {
-  max-width: 500px;
-}
-
-.title {
-  font-size: 48px;
-  font-weight: bold;
-  color: #1877F2;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 20px;
-  color: #1C1E21;
+  background-color: #FFFFFF; /* White background */
 }
 
 .login-card {
@@ -25,6 +8,12 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1877F2; /* Facebook blue */
 }
 
 .form-control {
