@@ -1,0 +1,22 @@
+1st Screen - Login screen
+- This screen should have following fields
+	UserId  
+	Password 
+	Captcha
+	
+- I will provide with the color coding in last
+
+2nd Screen - Home screen/Dashboard
+- After user Log's in, user should be able to see a Dashboard as Home screen with following widgets
+	- Total Contracts in system segregated by Contract type (Global or Local contract). This should be a pie Chart.
+		- This pie chart should provide a drill down capability. When I click on Global contract then it should take me to a list of all Global contracts. If I click on Local Contract it should take me to the list of a local contract. The screen for this list is defined in 3rd Screen
+	- Count Contract which are in a workflow and due date is in 5 days. This should be a score card.
+		- This score card should provide a drill down capability. When I click on the score card it should take me to a list of all contracts with due date in next 5 days. The screen for this list is defined in 3rd Screen
+	- My Task list. This should be a list with Task name, Task Description, Task Due Date
+	- etc
+- Prepare a dummy Data in JSON and use this dummy data to display this screen
+	
+3rd Screen
+- This screen should display a list of contracts with following attributes
+	- Contract ID,  Contract Name, Scope (Global or Local), Partner Name, Contract Status (Draft, In-Review, In Approval, Effective, etc.), Contract begin date, Contract Countries (this could be multiple countries, should display in 2 digit notation like US, IN, UK, CN, etc), Contract Owner, Notes
+	- Contract ID field is a hyperlink and when a user clicks on this, the contract should open in a new screen that we will define later.  

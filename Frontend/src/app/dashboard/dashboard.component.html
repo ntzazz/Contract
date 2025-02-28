@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #0078D4;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Contract Manager</a>
+  </div>
+</nav>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header">Contracts by Type</div>
+        <div class="card-body">
+          <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="'pie'" (chartClick)="onPieChartClick($event)"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card text-center" (click)="onScoreCardClick()" style="cursor: pointer;">
+        <div class="card-header">Contracts Due in 5 Days</div>
+        <div class="card-body">
+          <h3 style="color: #0078D4;">{{ dueContractsCount }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">My Task List</div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Due Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            <td>{{ task.taskName }}</td>
+            <td>{{ task.description }}</td>
+            <td>{{ task.dueDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

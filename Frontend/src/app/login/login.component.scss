@@ -1,0 +1,10 @@
+.card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-primary {
+  background-color: #0078D4;
+  border: none;
+  &:hover {
+    background-color: #005BB5;
+  }
+}

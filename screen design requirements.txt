@@ -1,0 +1,46 @@
+Screen Design Requirements
+1. Login Screen
+Purpose: Authenticate users before accessing the app.
+Fields:
+UserId: Text input for user identification.
+Password: Password input (masked).
+Captcha: A simple CAPTCHA challenge (e.g., text input with a generated code or image).
+Layout:
+Centered form with fields stacked vertically.
+Submit button below the fields.
+Notes:
+Will need backend integration for authentication (not yet prototyped, so we’ll simulate success for now).
+CAPTCHA will be a placeholder (e.g., text input) until a real implementation is added.
+2. Home Screen/Dashboard
+Purpose: Provide an overview of contracts and tasks after login.
+Widgets:
+Pie Chart - Total Contracts by Type:
+Displays count of Global vs. Local contracts.
+Drill-down: Clicking "Global" or "Local" navigates to the Contract List Screen filtered by type.
+Score Card - Contracts Due in 5 Days:
+Shows count of contracts in workflow with due dates within 5 days.
+Drill-down: Clicking navigates to the Contract List Screen filtered by due date.
+My Task List:
+List with columns: Task Name, Task Description, Task Due Date.
+No drill-down specified (yet).
+Etc: Placeholder for additional widgets (to be defined later).
+Layout:
+Widgets arranged in a grid (e.g., Pie Chart and Score Card side-by-side, Task List below).
+Data: Dummy JSON data to populate the widgets (defined below).
+3. Contract List Screen
+Purpose: Display a searchable, filterable list of contracts.
+Attributes:
+Contract ID: Hyperlink; clicking opens a new screen (TBD).
+Contract Name: Text.
+Scope: Global or Local.
+Partner Name: Text.
+Contract Status: Enum (e.g., Draft, In-Review, In Approval, Effective).
+Contract Begin Date: Date.
+Contract Countries: Multiple 2-digit codes (e.g., US, IN, UK, CN).
+Contract Owner: Text (user name/ID).
+Notes: Text.
+Layout:
+Table format with sortable columns.
+Responsive design for multiple countries display (e.g., comma-separated or badges).
+Notes:
+Filters from Dashboard drill-downs (e.g., Global/Local, due in 5 days) will apply here.

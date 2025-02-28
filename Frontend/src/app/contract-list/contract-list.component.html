@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #0078D4;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Contract Manager</a>
+  </div>
+</nav>
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">Contract List</div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Contract ID</th>
+            <th>Name</th>
+            <th>Scope</th>
+            <th>Partner</th>
+            <th>Status</th>
+            <th>Begin Date</th>
+            <th>Countries</th>
+            <th>Owner</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contract of filteredContracts">
+            <td><a [routerLink]="['/contract', contract.contractId]" style="color: #0078D4;">{{ contract.contractId }}</a></td>
+            <td>{{ contract.contractName }}</td>
+            <td>{{ contract.scope }}</td>
+            <td>{{ contract.partnerName }}</td>
+            <td><span [ngClass]="getStatusClass(contract.status)">{{ contract.status }}</span></td>
+            <td>{{ contract.beginDate }}</td>
+            <td><span *ngFor="let country of contract.countries" class="badge bg-primary me-1">{{ country }}</span></td>
+            <td>{{ contract.owner }}</td>
+            <td>{{ contract.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
